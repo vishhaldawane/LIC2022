@@ -2,6 +2,9 @@
 public class FunctionOverloadingTest {
 	public static void main(String[] args) {
 		
+		
+		System.out.println(10+20+" output is "+(10+20) );
+		
 		Phone myPhone = new Phone();
 		myPhone.dial();
 		

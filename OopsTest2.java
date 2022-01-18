@@ -31,6 +31,15 @@ public class OopsTest2 {
 		printPerson(gender,age1,name1);
 		printPerson(gender2,age1,name);
 		printPerson(gender1,age,name2);
+		
+		age=90;
+		age1=73;
+		age2=44;
+		
+		printPerson(gender,age1,name1);
+		printPerson(gender2,age1,name);
+		printPerson(gender1,age,name2);
+		
 	}
 	static void printPerson(char g, int a, String n) {
 		System.out.println("gender is "+g);
