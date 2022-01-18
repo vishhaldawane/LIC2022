@@ -65,6 +65,19 @@ class AdhaarCard
 	}
 	
 }
+// Make "VoterCard" for Person2 - hasA
+// Make "ReportCard" for Student - hasA
+
+// Make a Child class of Student known as ==> "Employee"
+
+// In Employee hasA empno,company, job,salary, = > "SalarySlip"
+
+// Make Executive as a Child of Employee
+//Executive will have => "Car"
+
+// Manager as a Child of Executive -> will have "House"
+
+// Director as a child of Manager -> will have "Bungalow"
 
 
 class Person2 // extends ......
