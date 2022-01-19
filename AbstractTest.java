@@ -55,7 +55,7 @@ abstract class Mammal extends Animal { //mandate of Mammal + Animal
 	Mammal(int age) {
 		super(age);
 	}
-	
+	void foo() { } // this function may not be overridden by the child
 	abstract void giveBirth(); //this would be a mandate over Mammal's implementation
 }
 abstract class Reptile extends Animal { // mandate of Reptile + Animal
@@ -161,6 +161,66 @@ Sword Whale	Dog	 Person	Turtle   Crocodile	Bat	Parrot <-- concrete classes
 					|
 					Executive ... .. ..
 					
+					
+interfaces = it is a pure abstract class
+			it cannot have non-abstract functions
+			by default every function is of type public abstract
+			
+	interface 
+		
+					
+		Names ending with ing are supposed to be interfaces
+		innovate function for them
+		
+		put them in relevant packages
+		
+		isolate all teh relevant interfaces, abstract classes, normal
+		classes in a particular package 
+		
+		
+		earth
+		
+		earth.species
+		
+		earth.species.water
+		earth.species.land <-- packages
+				
+		
+					earth
+						|
+			  Living	Breathing  Dying		
+				|live	|breath();	 |die();
+				+--------------------+
+					  |
+					  species
+					  |
+					  -----------------------------------------
+					  |										 |
+					Animal <-- abstract parent				Tree <-- as per your imagination develop this 
+						|									 |
+	-----------------------------------------------		-------------
+	|			|			|				 |			|	|	|	|
+	water		land		waterland		sky
+	|			|			 |				 |
+	Fish		Mammal		Reptile		   Bird <-- abstract children of abstract parent
+	|			|	 Talking   | 			     |
+--------	----------+	|   -------------	------------------------
+|       |   |         | |   |           |       |                 |
+|	    |	| Barking |	|   | Crawling	|		| Hanging Flying  | Diving
+| Swim- |   | |       | |   |  |     |  |		| |       | |	  |   |
+|  ming |   | |       | |   |  |     |  |       | +-------+ |	  |	  |
+|	| | |   | |       | |   |  |     |  |       | |         |	  |	  |
+Sword Whale	Dog	   Person	Turtle   Crocodile	Bat	    Parrot   Penguin<-- concrete classes
+					|  Studying
+					|   |
+					Student
+					|     Working
+					|     |
+					Employee
+					|
+					| Executing
+					|   |
+					Executive ... .. ..					
 					
 		Derivation			vs		Implementation
 		
