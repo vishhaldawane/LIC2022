@@ -8,6 +8,7 @@ public class StaticTest {
 		
 		
 		Kite k1 = new Kite("Pooja","Green",50,true);
+		
 		Kite.showKiteCount();
 		
 		Kite k2 = new Kite("Tanvi","Red",60,true);
@@ -22,6 +23,15 @@ public class StaticTest {
 		System.out.println("k1 "+k1); // + symbol would invoke toString() for us
 		System.out.println("k2 "+k2);
 		System.out.println("k3 "+k3);
+		
+		//k1.lostTheKite();
+		//k2.lostTheKite();
+		
+		
+		
+		k2.kiteFight(k1);
+		
+		Kite.showKiteCount();
 
 	}
 
@@ -35,6 +45,7 @@ class Kite // extends Object - by default parent of all the classes in Java
 	int length;  // object's data   [ non-static ]
 	boolean flying; //object's data [ non-static ]
 	
+	//JVM allocates the static data and function first in the memory
 	private static int kiteCount; // static is class's data
 	
 	public static void showKiteCount() {
@@ -49,7 +60,19 @@ class Kite // extends Object - by default parent of all the classes in Java
 		this.color = color;
 		this.length = length;
 		this.flying = flying;
-		++kiteCount; //increment it 
+		++kiteCount;
+	}
+	
+	void lostTheKite() {
+		System.out.println(owner+" lost the kite...");
+		kiteCount--;
+	}
+	
+	void kiteFight(Kite ref) {
+		System.out.println(owner+" initiated kite fight with ..."+ref.owner);
+		//lostTheKite();
+		ref.lostTheKite();
+		
 	}
 
 	@Override
